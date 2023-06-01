@@ -17,7 +17,12 @@ input {
   padding: 8px;
   font: inherit;
 }
-
+input.valid{
+  border:1px solid green;
+}
+input.invalid{
+  border:1px solid red;
+}
 button {
   padding: 8px 12px;
   cursor: pointer;

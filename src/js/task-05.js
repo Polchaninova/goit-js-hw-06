@@ -15,7 +15,6 @@ refs.nameInput.addEventListener("input", handelEnterNameOutput);
 
 function handelEnterNameOutput(event) {
     event.preventDefault()
-    // console.log(refs.nameOutput.textContent = event.currentTarget.value);
     refs.nameOutput.textContent = event.currentTarget.value;
 
     if (!event.currentTarget.value) {
