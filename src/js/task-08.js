@@ -38,7 +38,6 @@ function handleSubmitForm(e) {
 //     console.log(`value`, value)
 //     e.currentTarget.reset();
 // })
-// Доступ до даних форми
-// const {
+// Доступ до даних форми свойство elements
 //     elements: { email, password }
 // } = e.currentTarget;
