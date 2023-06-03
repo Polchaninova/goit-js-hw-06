@@ -21,35 +21,45 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-
+// *Завдання 2 має бути виконане шляхом перебору методом меп масиву ingredients
 const listProduct = document.querySelector("#ingredients")
-const itemEl = document.createElement("li");
-itemEl.textContent = "Potatoe";
-console.log(itemEl);
-itemEl.classList.add("item");
 
-const itemElFirst = document.createElement("li");
-itemElFirst.textContent = "Mushrooms";
-console.log(itemElFirst);
-itemElFirst.classList.add("item");
+const listItems = ingredients.map((ingredient) => {
+  const item = document.createElement("li");
+  item.textContent = ingredient;
+  item.classList.add("item");
+  return item;
+})
 
-const itemElSecond = document.createElement("li");
-itemElSecond.textContent = "Garlic";
-itemElSecond.classList.add("item");
-console.log(itemElSecond);
+listProduct.append(...listItems)
 
-const itemElNext = document.createElement("li");
-itemElNext.textContent = "Tomatos";
-itemElNext.classList.add("item");
-console.log(itemElNext);
 
-const itemElt = document.createElement("li");
-itemElt.textContent = "Herbs";
-itemElt.classList.add("item");
-console.log(itemElt);
 
-const itemElLast = document.createElement("li");
-itemElLast.textContent = "Condiments";
-itemElLast.classList.add("item");
-console.log(itemElLast);
-listProduct.append(itemEl, itemElFirst, itemElSecond, itemElNext, itemElt, itemElLast)
+// itemEl.textContent = "Potatoe";
+// console.log(itemEl);
+// itemEl.classList.add("item");
+
+// const itemElFirst = document.createElement("li");
+// itemElFirst.textContent = "Mushrooms";
+// console.log(itemElFirst);
+// itemElFirst.classList.add("item");
+
+// const itemElSecond = document.createElement("li");
+// itemElSecond.textContent = "Garlic";
+// itemElSecond.classList.add("item");
+// console.log(itemElSecond);
+
+// const itemElNext = document.createElement("li");
+// itemElNext.textContent = "Tomatos";
+// itemElNext.classList.add("item");
+// console.log(itemElNext);
+
+// const itemElt = document.createElement("li");
+// itemElt.textContent = "Herbs";
+// itemElt.classList.add("item");
+// console.log(itemElt);
+
+// const itemElLast = document.createElement("li");
+// itemElLast.textContent = "Condiments";
+// itemElLast.classList.add("item");
+// console.log(itemElLast);

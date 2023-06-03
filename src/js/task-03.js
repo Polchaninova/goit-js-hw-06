@@ -19,9 +19,11 @@ const images = [
 const listGallery = document.querySelector(".gallery");
 
 const bestGallery = images.map((image) =>
-  `<li class = "item"><img class = "img" src = "${image.url}" alt ="${image.alt}" ></li>`)
+  `<li class = "item"><img class = "img" src = "${image.url}" alt ="${image.alt}" ></li>`).join("")
 
 listGallery.insertAdjacentHTML("beforeend", bestGallery);
+
+
 
 //? 2 Variant
 // const elements = images.map((image) => {

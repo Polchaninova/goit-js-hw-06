@@ -23,7 +23,7 @@ refs.input.addEventListener("blur", onInputBlur);
 function onInputFocus() {
 }
 function onInputBlur(e) {
-    if (refs.input.dataset.length > e.currentTarget.value.length) {
+    if (refs.input.dataset.length >= e.currentTarget.value.length) {
         refs.input.classList.remove("valid")
         refs.input.classList.add("invalid")
     } else {
@@ -32,3 +32,7 @@ function onInputBlur(e) {
     }
 
 }
+
+// В завданні 6 бордер має набувати зеленого кольору лише якщо кількість введених
+//  символів дорівнює значенню атрибута data - length
+// https://monosnap.com/file/6G4PCxPgU6CbeZo2OWrpTf2aIQozXy ці кольори мають бути однаковими
