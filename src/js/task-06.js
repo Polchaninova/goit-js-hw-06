@@ -20,18 +20,23 @@ const refs = {
 }
 refs.input.addEventListener("blur", onInputBlur);
 
-function onInputFocus() {
-}
 function onInputBlur(e) {
-    if (refs.input.dataset.length >= e.currentTarget.value.length) {
+    // if (refs.input.dataset.length > e.currentTarget.value.length) {
+    if (refs.input.getAttribute('data-length') > e.currentTarget.value.length) {
+
         refs.input.classList.remove("valid")
         refs.input.classList.add("invalid")
-    } else {
+    }
+    else if (refs.input.getAttribute('data-length') < e.currentTarget.value.length) {
+        refs.input.classList.remove("valid")
+        refs.input.classList.add("invalid")
+    }
+    else {
         refs.input.classList.remove("invalid")
         refs.input.classList.add("valid")
     }
 
-}
+};
 
 // В завданні 6 бордер має набувати зеленого кольору лише якщо кількість введених
 //  символів дорівнює значенню атрибута data - length

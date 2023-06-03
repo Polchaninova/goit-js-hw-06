@@ -9,7 +9,6 @@
 </ > */}
 const refs = {
   body: document.querySelector("body"),
-  divWidget: document.querySelector(".widget"),
   button: document.querySelector(".change-color"),
   spanColor: document.querySelector(".color"),
 }
@@ -18,9 +17,10 @@ refs.button.addEventListener("click", onChangeColor)
 
 
 function onChangeColor() {
-  refs.body.style.backgroundColor = getRandomHexColor();
+  const color = getRandomHexColor();
+  refs.body.style.backgroundColor = color;
   // выводит значение цвета в span.color.
-  refs.spanColor.textContent = getRandomHexColor();
+  refs.spanColor.textContent = color;
 }
 
 // Для генерации случайного цвета используй функцию getRandomHexColor.
